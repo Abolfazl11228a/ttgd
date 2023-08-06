@@ -1861,6 +1861,11 @@ function start() {
 
   arrow.addEventListener("click", (e) => {
     runner.tRex.startJump(runner.currentSpeed);
+    runner.playSound(runner.soundFx.BUTTON_PRESS);
+
+    if (runner.crashed) {
+      runner.restart();
+    }
   });
 }
 
