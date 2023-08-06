@@ -76,6 +76,7 @@
             position: absolute;
             top: 0;
             z-index: 2;
+            background-color: #000 !important;
         }
 
         .offline .controller {
@@ -1186,9 +1187,6 @@
         }
 
         @media screen and (min-width: 768px) {
-            .apexcharts-toolbar {
-                /*opacity: 0;*/
-            }
 
             .apexcharts-canvas:hover .apexcharts-toolbar {
                 opacity: 1;
@@ -1249,6 +1247,24 @@
         .black-page .apexcharts-yaxis-label {
             fill: #fff !important;
         }
+
+        .up-arrow-box{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            z-index: 99999999999;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
     </style>
     <script src="../js/jquery.min.js"></script>
     <script>
@@ -1266,7 +1282,11 @@
 </head>
 
 <body id="t" class="offline black-page">
-
+    <!-- Start of Up Arrow -->
+    <div class="up-arrow-box">
+        <ion-icon name="arrow-up"></ion-icon>
+    </div>
+    <!-- End of Up Arrow -->
     <header id="main-frame-error" class="interstitial-wrapper __wrapper">
         <div id="main-content">
            
@@ -1447,7 +1467,13 @@
     </footer>
 
 
+
     </section>
+
+    <!-- link icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- scripts -->
     <script type="text/javascript">
         (function () {
             var link_element = document.createElement("link"),
